@@ -1,0 +1,31 @@
+models:
+  - name: stg_supplies
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: product_id
+        # data_type: int
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: supply_uuid
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: supply_id
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: supply_name
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: supply_cost
+        data_type: float
+        constraints:
+          - type: not_null
+      - name: is_perishable_supply
+        data_type: boolean
+        constraints:
+          - type: not_null
